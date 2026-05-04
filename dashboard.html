@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - TaskFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="dashboard">
+  <aside class="sidebar">
+    <h2>TaskFlow</h2>
+    <ul>
+      <li>🏠 Dashboard</li>
+      <li>📋 My Missions</li>
+      <li>✅ Executed</li>
+      <li>📊 Analytics</li>
+      <li>⚙️ Settings</li>
+      <li>🚪 Logout</li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <div class="topbar">
+      <div>
+        <h1>Welcome Back, Champion 🚀</h1>
+        <p style="color:#64748b; margin-top:8px; font-size:1rem;">
+          Track goals, manage priorities, and dominate your productivity.
+        </p>
+      </div>
+      <button class="btn" style="width:auto; padding:12px 24px;">+ New Mission</button>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Total Missions</h3>
+        <p>24</p>
+      </div>
+      <div class="card">
+        <h3>Executed</h3>
+        <p>18</p>
+      </div>
+      <div class="card">
+        <h3>In Progress</h3>
+        <p>6</p>
+      </div>
+      <div class="card">
+        <h3>Efficiency Rate</h3>
+        <p>75%</p>
+      </div>
+    </div>
+
+    <div class="task-form">
+      <h2>Launch New Mission</h2>
+      <form>
+        <div class="input-group">
+          <label>Mission Title</label>
+          <input type="text" placeholder="Enter mission title">
+        </div>
+
+        <div class="input-group">
+          <label>Mission Objectives</label>
+          <textarea placeholder="Outline mission objectives..."></textarea>
+        </div>
+
+        <div class="input-group">
+          <label>Deadline</label>
+          <input type="date">
+        </div>
+
+        <button class="btn">Deploy Mission</button>
+      </form>
+    </div>
+  </main>
+</div>
+</body>
+</html>

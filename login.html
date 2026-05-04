@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - TaskFlow</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <div class="auth-box">
+    <div class="left-panel">
+      <h1>TaskFlow</h1>
+      <p>Manage tasks smarter, faster, and beautifully.</p>
+    </div>
+    <div class="right-panel">
+      <h2 class="form-title">Welcome Back</h2>
+      <form onsubmit="redirectToWelcome(event)">
+        <div class="input-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="Enter your email" required>
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" placeholder="Enter your password" required minlength="8">
+          <small style="color:#591543; display:block; margin-top:8px;">Use 8+ characters with uppercase, lowercase, number & symbol.</small>
+        </div>
+        <button class="btn">Login</button>
+      </form>
+
+      <div class="social-login">
+        <button class="social-btn google-btn">Login with Google</button>
+        <button class="social-btn facebook-btn">Login with Facebook</button>
+      </div>
+
+      <div class="switch-link">
+        Don't have an account? <a href="signup.html">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function redirectToWelcome(event) {
+  event.preventDefault();
+  window.location.href = 'welcome.html';
+}
+</script>
+</body>
+</html>
