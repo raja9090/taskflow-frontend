@@ -7,7 +7,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <div class="dashboard">
+  
+  <!-- SIDEBAR -->
   <aside class="sidebar">
     <h2>TaskFlow</h2>
     <ul>
@@ -16,62 +19,101 @@
       <li>✅ Executed</li>
       <li>📊 Analytics</li>
       <li>⚙️ Settings</li>
-      <li>🚪 Logout</li>
+      <li onclick="logoutUser()" style="cursor:pointer;">🚪 Logout</li>
     </ul>
   </aside>
 
+  <!-- MAIN CONTENT -->
   <main class="main-content">
+
+    <!-- TOPBAR -->
     <div class="topbar">
       <div>
-        <h1>Welcome Back, Champion 🚀</h1>
+        <h1 id="userWelcome">Welcome Back, Champion 🚀</h1>
         <p style="color:#64748b; margin-top:8px; font-size:1rem;">
           Track goals, manage priorities, and dominate your productivity.
         </p>
       </div>
-      <button class="btn" style="width:auto; padding:12px 24px;">+ New Mission</button>
     </div>
 
+    <!-- ANALYTICS CARDS -->
     <div class="cards">
       <div class="card">
         <h3>Total Missions</h3>
-        <p>24</p>
+        <p id="totalTasks">0</p>
       </div>
+
       <div class="card">
         <h3>Executed</h3>
-        <p>18</p>
+        <p id="completedTasks">0</p>
       </div>
+
       <div class="card">
         <h3>In Progress</h3>
-        <p>6</p>
+        <p id="pendingTasks">0</p>
       </div>
+
       <div class="card">
         <h3>Efficiency Rate</h3>
-        <p>75%</p>
+        <p id="efficiencyRate">0%</p>
       </div>
     </div>
 
+    <!-- TASK FORM -->
     <div class="task-form">
       <h2>Launch New Mission</h2>
-      <form>
+
+      <form id="taskForm">
+
         <div class="input-group">
           <label>Mission Title</label>
-          <input type="text" placeholder="Enter mission title">
+          <input
+            type="text"
+            id="taskInput"
+            placeholder="Enter mission title"
+            required
+          >
         </div>
 
         <div class="input-group">
           <label>Mission Objectives</label>
-          <textarea placeholder="Outline mission objectives..."></textarea>
+          <textarea
+            id="taskObjective"
+            placeholder="Outline mission objectives..."
+          ></textarea>
         </div>
 
         <div class="input-group">
           <label>Deadline</label>
-          <input type="date">
+          <input
+            type="date"
+            id="taskDeadline"
+          >
         </div>
 
-        <button class="btn">Deploy Mission</button>
+        <button type="submit" class="btn">
+          Deploy Mission
+        </button>
+
       </form>
     </div>
+
+    <!-- TASK DISPLAY SECTION -->
+    <div class="task-list-section">
+      <h2>Your Active Missions</h2>
+      <div id="taskList"></div>
+    </div>
+
   </main>
 </div>
+
+<!-- ================= SCRIPT ================= -->
+<script src="script.js"></script>
+
+<!-- ================= AUTH PROTECTION ================= -->
+<script>
+  checkAuth();
+</script>
+
 </body>
 </html>

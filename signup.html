@@ -7,31 +7,81 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <div class="container">
   <div class="auth-box">
+
+    <!-- LEFT PANEL -->
     <div class="left-panel">
       <h1>Create Account</h1>
       <p>Start organizing your workflow like a pro.</p>
     </div>
+
+    <!-- RIGHT PANEL -->
     <div class="right-panel">
       <h2 class="form-title">Join TaskFlow</h2>
-      <form onsubmit="redirectToWelcome(event)">
+
+      <form onsubmit="event.preventDefault(); signupUser();">
+
         <div class="input-group">
           <label>Full Name</label>
-          <input type="text" placeholder="Enter full name" required>
+          <input 
+            type="text" 
+            id="signupName"
+            placeholder="Enter full name" 
+            required
+          >
         </div>
+
         <div class="input-group">
           <label>Email Address</label>
-          <input type="email" placeholder="Enter your email" required>
+          <input 
+            type="email" 
+            id="signupEmail"
+            placeholder="Enter your email" 
+            required
+          >
         </div>
+
         <div class="input-group">
           <label>Password</label>
-          <input type="password" placeholder="Create password" required minlength="8">
-          <small style="color:#64748b; display:block; margin-top:8px;">Strong password required for better security.</small>
+          <input 
+            type="password" 
+            id="signupPassword"
+            placeholder="Create password" 
+            required 
+            minlength="8"
+          >
+          <small style="color:#64748b; display:block; margin-top:8px;">
+            Strong password required for better security.
+          </small>
         </div>
-        <button class="btn">Sign Up</button>
+
+        <button type="submit" class="btn">Sign Up</button>
+
       </form>
 
+      <!-- SOCIAL LOGIN -->
       <div class="social-login">
-        <button class="social-btn google-btn">Sign up with Google</button>
+        <button type="button" class="social-btn google-btn">
+          Sign up with Google
+        </button>
+      </div>
+
+      <!-- LOGIN LINK -->
+      <p style="margin-top:20px; color:white; text-align:center;">
+        Already have an account?
+        <a href="login.html" style="color:#60a5fa; text-decoration:none;">
+          Login
+        </a>
+      </p>
+
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<script src="script.js"></script>
+
+</body>
 </html>
